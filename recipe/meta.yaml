@@ -18,7 +18,6 @@ build:
 requirements:
   host:
     - python {{ python_min }}
-    - setuptools >=61.0
     - hatchling
     - pip
   run:
@@ -42,8 +41,10 @@ test:
 
 about:
   home: https://mammos-project.github.io
-  summary: A multiphyscis simulation suite for magnetic materials.
-  license: BSD-3-Clause
+  doc_url: https://mammos-project.github.io/mammos
+  dev_url: https://github.com/MaMMoS-project/mammos
+  summary: A multiphysics simulation suite for magnetic materials.
+  license: MIT
   license_file: LICENSE
 
 extra:
