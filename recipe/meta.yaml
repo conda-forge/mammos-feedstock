@@ -1,5 +1,6 @@
 {% set name = "mammos" %}
-{% set version = "0.0.1" %}
+{% set version = "0.11.2" %}
+{% set python_min = "3.11" %}
 
 package:
   name: {{ name|lower }}
@@ -7,20 +8,27 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/mammos-{{ version }}.tar.gz
-  sha256: 04a15aba39ce48b95a3ff5e2ae1fd47456d111bbca615fc7f2e638728d200831
+  sha256: 961f55783951d3e21461eecaa2c7c86324e6cbfa1f67182d97fbd8eba63a3666
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 2
+  number: 0
 
 requirements:
   host:
     - python {{ python_min }}
-    - setuptools >=61.0
+    - hatchling
     - pip
   run:
     - python >={{ python_min }}
+    - mammos-ai ==0.2.0
+    - mammos-analysis ==0.4.0
+    - mammos-dft ==0.4.1
+    - mammos-entity ==0.11.1
+    - mammos-mumag ==0.10.1
+    - mammos-spindynamics ==0.3.1
+    - mammos-units ==0.3.2
 
 test:
   imports:
@@ -33,8 +41,10 @@ test:
 
 about:
   home: https://mammos-project.github.io
-  summary: A multiphyscis simulation suite for magnetic materials.
-  license: BSD-3-Clause
+  doc_url: https://mammos-project.github.io/mammos
+  dev_url: https://github.com/MaMMoS-project/mammos
+  summary: A multiphysics simulation suite for magnetic materials.
+  license: MIT
   license_file: LICENSE
 
 extra:
