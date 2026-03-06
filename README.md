@@ -5,9 +5,13 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/mammos-feedstoc
 
 Home: https://mammos-project.github.io
 
-Package license: BSD-3-Clause
+Package license: MIT
 
-Summary: A multiphyscis simulation suite for magnetic materials.
+Summary: A multiphysics simulation suite for magnetic materials.
+
+Development: https://github.com/MaMMoS-project/mammos
+
+Documentation: https://mammos-project.github.io/mammos
 
 Current build status
 ====================
